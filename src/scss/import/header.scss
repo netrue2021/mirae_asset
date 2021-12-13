@@ -1,0 +1,151 @@
+@charset "utf-8";
+@import '../../img/images/sprite.scss';
+
+.header-area{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1440px;
+  background-color: #fff;
+  z-index: 100;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #027373;
+  }
+
+  .inner{
+    padding: 0 20px;
+    font-size: 0;
+    box-sizing: border-box;
+    @include clear;
+  }
+
+  .header-title{
+    position: relative;
+    float: left;
+    padding: 22px 0;
+    margin-right: 70px;
+    &:before{
+      content: '';
+      position: absolute;
+      @include sprite($logo_main);
+    }
+
+    .title-link{
+      display: block;
+      width: 168px;
+      height: 57px;
+    }
+  }
+
+  .btn-link{
+    float: left;
+    padding: 12px 20px;
+    margin-top: 25px;
+    color: $main-color;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid $main-color;
+    @include border-radius(6px);
+    &:hover{
+      color: #fff;
+      background-color: $main-color;
+      transition: ease-out 0.3s;
+    }
+  }
+
+  .tab-list{
+    float: left;
+    margin-left:50px;
+
+    .list-item{
+      position: relative;
+      display: inline-block;
+      padding: 39px 20px;
+      vertical-align: top;
+      cursor: pointer;
+      &:hover{
+        .item-title:before{
+          content: '';
+          position: absolute;
+          top: 30px;
+          right: 0;
+          left: 0;
+          height: 2px;
+          background-color: $main-color;
+        }
+        .sub-tab{
+          display: block;
+        }
+      }
+      .item-title{
+        position: relative;
+        color: #000;
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+
+    .sub-tab{
+      display: none;
+      position: absolute;
+      top: 101px;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 5px 7px 16px 0 rgb(16 16 16 / 15%);
+      z-index: 50;
+
+      .list-item{
+        width: inherit;
+        padding: 0;
+        background-color: #fff;
+        &:hover{
+          .item-link{
+            color: $main-color;
+            font-weight: bold;
+          }
+        }
+        + .list-item{
+          .item-link{
+            margin-top: 5px;
+          }
+        }
+      }
+      .item-link{
+        display: block;
+        padding: 5px 10px 5px 0;
+        color: #000;
+        font-size: 13px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .btn-box{
+    float: right;
+    padding: 10px 5px;
+    margin-top: 25px;
+
+    .btn-login{
+      display: inline-block;
+      @include sprite($icon_login);
+      vertical-align: top;
+      + .btn-map{
+        margin-left: 20px;
+      }
+    }
+    .btn-map{
+      display: inline-block;
+      @include sprite($icon_menu);
+      vertical-align: top;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import 'common/reset';
+@import 'common/common';
+@import 'common/mixin';
+@import 'common/font';
+
+@import 'import/main';
+@import 'import/header';
+@import 'import/footer';
+
+@import '../img/images/sprite.scss';
+@import '../slick/slick-theme';

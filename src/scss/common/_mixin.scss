@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+@mixin clear {
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin ellipsis($line: 1) {
+  @if ($line == 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+
+// 가운데 정렬
+@mixin center-all {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 가로 정렬
+@mixin center-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+//세로 정렬
+@mixin center-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//플렉스 사용시
+@mixin flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+// 스프라이트
+@mixin sprite($sprite,$name,$size){
+  background-image: url(map_get($sprite,url));
+  background-position: getImagePositionFromSprite(
+          $name,
+          map_get($sprite,names),
+          map_get($sprite,columns),
+          map_get($sprite,rows)
+  );
+  height: $size;
+  width: $size;
+  background-size: auto $size * (map_get($sprite,rows));
+}

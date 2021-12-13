@@ -1,0 +1,40 @@
+@charset "utf-8";
+@import '../../img/images/sprite.scss';
+
+.footer-area{
+  width: 100%;
+  min-width: 1440px;
+  background-color: #eee;
+
+  .inner{
+    position: relative;
+    padding: 60px;
+    box-sizing: border-box;
+  }
+}
+
+.footer-logo{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  @include sprite($logo_footer);
+
+  .logo-link{
+    display: block;
+    height: 100%;
+  }
+}
+
+.footer-address{
+  color: #333;
+  font-size: 15px;
+
+  span{
+    display: inline-block;
+    vertical-align: top;
+    + span{
+      margin-left: 30px;
+    }
+  }
+}
