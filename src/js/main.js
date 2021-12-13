@@ -23,7 +23,7 @@ $(function() {
 		var posY = $(window).scrollTop();
 		// $("#btn_top").stop().animate({"top":posY+currentPosition-55+"px"},500);
 		if ( posY > 100 ){
-			$("#btn_top").css('opacity','.8');
+			$("#btn_top").css('opacity','1');
 		} else if(posY < 100) {
 			$("#btn_top").css('opacity','0');
 		};
