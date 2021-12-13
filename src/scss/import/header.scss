@@ -51,11 +51,11 @@
     font-size: 14px;
     font-weight: bold;
     border: 1px solid $main-color;
+    transition: ease-out 0.3s;
     @include border-radius(6px);
     &:hover{
       color: #fff;
       background-color: $main-color;
-      transition: ease-out 0.3s;
     }
   }
 
