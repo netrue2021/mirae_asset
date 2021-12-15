@@ -226,6 +226,7 @@
       }
     }
     .list-title{
+      display: block;
       font-size: 18px;
     }
     .list-amout{
@@ -252,7 +253,8 @@
       line-height: 40px;
       background-color: #fff;
       border: 1px solid #027373;
-      outline: 3px solid #fff !important;
+      box-shadow: 0 0 0 3px #fff;
+      // outline: 3px solid #fff !important;
       @include border-radius(6px);
       text-align: center;
       transition: ease-out 0.3s;

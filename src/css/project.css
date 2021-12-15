@@ -148,6 +148,10 @@ button {
   background-color: #fff;
 }
 
+br {
+  font-size: 0;
+}
+
 /* Form */
 textarea {
   border: 1px solid #dbdbdb;
@@ -598,6 +602,7 @@ body {
   border-left: 2px solid #fff;
 }
 .slide-area .sub-list .list-title {
+  display: block;
   font-size: 18px;
 }
 .slide-area .sub-list .list-amout {
@@ -624,7 +629,7 @@ body {
   line-height: 40px;
   background-color: #fff;
   border: 1px solid #027373;
-  outline: 3px solid #fff !important;
+  box-shadow: 0 0 0 3px #fff;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
